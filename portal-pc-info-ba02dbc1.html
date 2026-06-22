@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>杂志专题 · 世界杯 | 日常阅览</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', 'Noto Serif SC', serif;
+            background-color: #f6f3ed;
+            color: #2d2a24;
+            line-height: 1.7;
+            padding: 2rem 1rem;
+        }
+
+        .wrapper {
+            max-width: 960px;
+            margin: 0 auto;
+            background: #fefcf8;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+            border-radius: 28px;
+            padding: 2.4rem 2rem 3rem;
+        }
+
+        /* hero 横幅 — 杂志式大标题 */
+        .hero {
+            margin-bottom: 2.8rem;
+            border-bottom: 2px solid #e3dcd1;
+            padding-bottom: 1.6rem;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            color: #3d352b;
+            line-height: 1.2;
+            margin-bottom: 0.6rem;
+        }
+
+        .hero .sub {
+            font-style: italic;
+            color: #7f7569;
+            font-size: 1.1rem;
+            border-left: 3px solid #c7b9a8;
+            padding-left: 1rem;
+            margin-top: 0.25rem;
+        }
+
+        /* 背景说明区 — 类似杂志编者按 */
+        .background-note {
+            background: #efebe4;
+            padding: 1.4rem 1.8rem;
+            border-radius: 20px;
+            margin-bottom: 2.6rem;
+            font-size: 0.98rem;
+            color: #3e3730;
+            box-shadow: inset 0 1px 4px rgba(0,0,0,0.02);
+        }
+
+        .background-note p {
+            margin-bottom: 0.4rem;
+        }
+
+        .background-note strong {
+            font-weight: 600;
+            color: #3d352b;
+        }
+
+        /* 正文卡片段落 */
+        .content-card {
+            margin-bottom: 2.8rem;
+        }
+
+        .content-card h2 {
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: #4a4036;
+            border-bottom: 1px dashed #d6cdc1;
+            padding-bottom: 0.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .content-card p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        /* 引用块 / 提示框 */
+        .inset-quote {
+            background: #f2ede6;
+            border-left: 5px solid #b5a692;
+            padding: 0.9rem 1.5rem;
+            margin: 1.2rem 0 1.6rem 0;
+            border-radius: 0 16px 16px 0;
+            font-style: normal;
+            color: #4d433a;
+            font-size: 0.98rem;
+        }
+
+        .inset-quote::before {
+            content: "📌 ";
+            font-style: normal;
+            opacity: 0.7;
+        }
+
+        /* 额外场景提示小卡片 */
+        .tip-card {
+            background: #f9f5ef;
+            border: 1px solid #e2d9ce;
+            padding: 1rem 1.5rem;
+            border-radius: 24px;
+            margin: 1.5rem 0 1.8rem;
+        }
+
+        .tip-card p {
+            margin-bottom: 0.2rem;
+        }
+
+        .tip-card .tag {
+            display: inline-block;
+            background: #dad0c2;
+            color: #3b342c;
+            padding: 0.2rem 1rem;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            margin-right: 0.5rem;
+        }
+
+        /* 页尾提示 */
+        .footer-note {
+            margin-top: 3rem;
+            padding-top: 1.6rem;
+            border-top: 2px solid #e3dcd1;
+            font-size: 0.95rem;
+            color: #6b6258;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 0.8rem;
+        }
+
+        .footer-note a {
+            color: #4d4439;
+            text-decoration: none;
+            border-bottom: 1px solid #b5a692;
+            transition: border-color 0.2s;
+        }
+
+        .footer-note a:hover {
+            border-bottom-color: #7f6f5b;
+            color: #2f2a22;
+        }
+
+        .footer-note .signature {
+            font-style: italic;
+            opacity: 0.7;
+        }
+
+        /* 响应式细节 */
+        @media (max-width: 640px) {
+            .wrapper {
+                padding: 1.6rem 1.2rem 2.2rem;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero .sub {
+                font-size: 0.95rem;
+            }
+            .content-card h2 {
+                font-size: 1.35rem;
+            }
+            .footer-note {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 420px) {
+            body {
+                padding: 1rem 0.6rem;
+            }
+            .wrapper {
+                padding: 1.2rem 0.8rem 1.8rem;
+                border-radius: 18px;
+            }
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+
+    <!-- 杂志横幅 -->
+    <div class="hero">
+        <h1>世界杯 · 查览笔记</h1>
+        <div class="sub">一场赛事，多种读法 —— 从日常查询到延伸阅读</div>
+    </div>
+
+    <!-- 背景说明：杂志式编者按 -->
+    <div class="background-note">
+        <p><strong>编者案</strong> 你或许已经留意到，近几届世界杯的信息密度越来越大：赛程、历史、数据、观赛路径…… 对许多人来说，足球盛事早已不限于直播九十分钟，而是成为一种可供随时查阅、对照和品读的文化素材。本专题尝试从“日常工具视角”重新梳理：当我们谈论世界杯时，我们其实在翻阅什么。</p>
+    </div>
+
+    <!-- 第一段 · 从日常查询说起 -->
+    <div class="content-card">
+        <h2>① 查询，是进入的一种方式</h2>
+        <p>很多人第一次认真打开世界杯相关页面，不是为了看集锦，而是为了查一个时间、一支小组的出线形势，或者某位球员的历史数据。这种查询行为看似轻巧，却是与赛事建立真实联系的起点。一个结构清晰、信息可溯的<strong>信息集纳页面</strong>，能让查询本身变得流畅，也让偶然的一瞥变成一次有效了解。</p>
+        <p>正因如此，<a href="https://portal-pc-worldcup.com">世界杯</a>在赛前与赛期往往成为检索高频词——人们需要一处可以安静对照赛历、浏览分组、回顾经典瞬间的地方，而不是被推送淹没。</p>
+    </div>
+
+    <!-- 第二段 · 对照与比较的乐趣 -->
+    <div class="content-card">
+        <h2>② 对照，发现隐藏的线索</h2>
+        <p>世界杯的魅力有一部分藏在“对照”里：这届用球与四年前有何不同？主办国的场馆分布呈现怎样的地理逻辑？夺冠热门的历史交锋记录是否暗示某种规律？当页面同时呈现多个维度的信息，读者便能在对比中形成自己的判断，而不只是被动接收结论。</p>
+
+        <div class="inset-quote">
+            一位经常查阅赛事资料的读者提到：“我习惯同时打开赛程表和历届冠军列表，偶尔还会翻翻早期赛事的规则说明——这种对照让人对世界杯的理解更立体。”
+        </div>
+
+        <p>一个好的赛事介绍页，理应容纳这种对照的需求：既提供当下，也保留过往；既展示结果，也透露脉络。这也是为什么我们始终强调界面应保持克制与清晰，让信息本身成为主角。</p>
+    </div>
+
+    <!-- 第三段 · 延伸阅读：把世界杯读厚 -->
+    <div class="content-card">
+        <h2>③ 延伸，一种温和的深入</h2>
+        <p>从一场比赛延展到一段历史，从一支球队延伸到一种足球哲学——延伸阅读让世界杯不止于赛事。你可以因为某次精彩扑救而去了解门将训练体系，也可以因为一记任意球而翻阅历年最佳进球盘点。这种阅读没有压迫感，它像一条安静的分岔小径，由兴趣牵引。</p>
+
+        <div class="tip-card">
+            <p><span class="tag">📖 场景提示</span> 假设你正在写一篇关于世界杯用球演变的短文，或者陪孩子完成一份足球主题的简报——这类延伸阅读场景下，一个整合了背景、数据和历史脉络的页面，往往比搜索引擎零散的返回结果更省力。</p>
+        </div>
+
+        <p>在信息过载的时代，“可延伸但不必一次性读完”是一种难得的品质。<a href="https://portal-pc-worldcup.com">世界杯</a>专题页的设计初衷，正是希望提供这样一个沉静、可翻阅的文本容器，让读者依照自己的节奏停留或走远。</p>
+    </div>
+
+    <!-- FAQ 摘要 (杂志式轻问答) -->
+    <div class="tip-card" style="margin-top: 1rem;">
+        <p style="margin-bottom: 0.6rem;"><strong>常见翻阅点 (FAQ 摘要)</strong></p>
+        <p style="font-size: 0.92rem; line-height: 1.6; margin-bottom: 0.2rem;">· 如何快速找到本届完整赛程？ — 多数赛事信息页首屏即可见。<br>
+        · 历届冠军与举办地列表 — 通常以表格或时间轴形式呈现于独立分区。<br>
+        · 能否对比两届赛事数据？ — 页面若保留历史归档即可对照，建议留意年份筛选。<br>
+        · 适合非球迷阅读吗？ — 人文与背景类内容对新手友好，无硬门槛。</p>
+    </div>
+
+    <!-- 页尾访问提示 -->
+    <div class="footer-note">
+        <span>杂志专题 · 日常版 / 你可以随时翻阅 <a href="https://portal-pc-worldcup.com">世界杯</a> 页面，在赛事之外找到查询、对照与延伸的节奏。</span>
+        <span class="signature">—— 文字内容仅作阅览参考 · 2025</span>
+    </div>
+
+</div>
+</body>
+</html>
